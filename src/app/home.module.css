@@ -1,0 +1,142 @@
+.container{
+  display: flex;
+  gap: 100px;
+}
+
+
+.textContainer{
+flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.title{
+  font-size: 70px;
+}
+
+.desc{
+  font-size: 20px;
+}
+
+.buttons{
+  display: flex;
+  gap: 20px;
+}
+
+.button{
+  padding: 20px;
+  min-width: 120px;
+  cursor: pointer; 
+  border: none;
+  border-radius: 5px;
+}
+
+.brands{
+  width: 500px;
+  height: 50px;
+  position: relative;
+  filter: grayscale(1);
+}
+.imgContainer{
+  flex: 1;
+  position: relative;
+ 
+}
+
+.button:first-child{
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+}
+
+.sectionContainer{
+  margin-top: 50px;
+  /* min-height: 100vh; */
+  width: 100%;
+  /* background-color: ; */
+}
+
+
+
+
+
+.sectionContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: var(--bg);
+ 
+}
+
+.serviceWrapper {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.serviceText {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: var(--text);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 20px; /* Space between cards */
+}
+
+.card {
+  background-color: var(--bgSoft);
+  color: var(--textSoft);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.card i {
+  font-size: 2rem;
+  color: var(--btn-bg);
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr); /* One column on mobile */
+  }
+}
