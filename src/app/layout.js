@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Sath Finance Site",
-  description: "Access to financial information",
+  title: "Sath Insurance",
+  description: "Access to Insurance information",
 };
 
 export default function RootLayout({ children }) {
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
      
       <Navbar/>
         {children}
-        <Footer/>
+        {/*<Footer/> */}
         </div>
       </body>
     </html>

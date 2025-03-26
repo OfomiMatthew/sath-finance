@@ -8,7 +8,7 @@ import styles from './navbar.module.css' // better way to import a component css
 const Navbar = () => {
   return (
     <div className={styles.container}>
-      <Link href='/' className={styles.logo}>Sath Finance</Link>
+      <Link href='/' className={styles.logo}>Sath Insurance</Link>
       <div>
       <NavLinks />
       </div>
