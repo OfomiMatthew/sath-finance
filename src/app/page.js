@@ -1,11 +1,19 @@
+"use client"
+
 import Image from "next/image";
 import styles from "./home.module.css";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChartLine, faChartPie, faMoneyBillWave, faShieldAlt, faFileInvoiceDollar, faCreditCard } from "@fortawesome/free-solid-svg-icons";
-import StockInfo from "@/components/stockInfo/stockinfo";
+import { faCommentDots, faTimes } from "@fortawesome/free-solid-svg-icons";
+
 
 
 export default function Home() {
+  const [open,setOpen] = useState(false);
+
+  const changeModal = ()=>{
+    setOpen(!open);
+  }
   return (
 
     <div>
@@ -20,9 +28,7 @@ export default function Home() {
           <button className={styles.button}>Contact</button>
         </div>
 
-        {/*<div className={styles.brands}>
-          <Image src="/brands.png" alt="" fill className={styles.brandImg} />
-        </div>*/}
+        
       </div>
       <div className={styles.imgContainer}>
         <Image src="/hero.gif" alt="" fill className={styles.heroImg} />
@@ -78,7 +84,29 @@ export default function Home() {
       </div>
     </div>
   </div>
-{/*<StockInfo /> */}
+<div>
+
+</div>
+
+<div>
+      {/* Chatbot Toggle Button */}
+      <button onClick={changeModal} className={styles.chatbotButton}>
+        <FontAwesomeIcon icon={open ? faTimes : faCommentDots} />
+      </button>
+
+      {/* Chatbot Window */}
+      {open && (
+        <div className={styles.chatbotContainer}>
+          <iframe
+            src="https://copilotstudio.microsoft.com/environments/Default-804b1c9a-f4c5-498c-a4ab-71f1e249e369/bots/cr9fb_agent/webchat?__version__=2"
+            className={styles.widgetIframe}
+            frameBorder="0"
+            title="Copilot Assistant"
+          />
+        </div>
+      )}
+    </div>
+
   </div>
   );
 }

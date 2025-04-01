@@ -140,3 +140,78 @@ flex: 1;
     grid-template-columns: repeat(1, 1fr); /* One column on mobile */
   }
 }
+
+
+/* .chatbotContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  height: 500px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.widgetIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+} */
+
+
+/* Floating Chat Button */
+.chatbotButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.chatbotButton:hover {
+  transform: scale(1.1);
+  background-color: #005ea6;
+}
+
+/* Chatbot Container */
+.chatbotContainer {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  height: 500px;
+  z-index: 1000;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Chatbot Frame */
+.widgetIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
